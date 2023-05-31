@@ -36,7 +36,7 @@ impl NimGame {
         for game_size in self.0.len()..=max_game_size {
             let mut current_nims = vec![false; game_size + 1];
 
-            for field in 0..game_size {
+            for field in 0..(game_size / 2 + 1) {
                 let first = if field < 1 { 0 } else { field - 1 };
                 let second = if field + 2 > game_size {
                     0
